@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: arial;
+    transition: 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card img {
+    width: 100%;
+    max-height: 300px;
+    min-height: 180px;
+    object-fit: contain;
+}
+
+.description {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    padding: 2px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin: 1px;
+}
+
+#search {
+    margin-left: 30px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.checked {
+    color: orange;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 50%; 
+    margin-bottom: 20px;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+
+}
+
+.sidenav>.element {
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+
+ }
+
+
+@media screen and (max-width: 1000px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    input[type="search"] {
+        width: 100%;
+    }
+    #search {
+        margin-left: 0;
+    }
+    .navbar {
+        display: block;
+        width: 50%; 
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
